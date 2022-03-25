@@ -44,7 +44,7 @@
   "sourceMap": "93:1481:6:-:0;;;252:77;;;;;;;;;;93:1481;;;;;;",
   "deployedSourceMap": "93:1481:6:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;646:362;;;;;;;;;;;;;:::i;:::-;;1344:227;;;;;;;;;;;;;:::i;:::-;;335:305;;;:::i;:::-;;1014:324;;;:::i;:::-;;646:362;:::o;1344:227::-;:::o;335:305::-;:::o;1014:324::-;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\nimport \"./Token.sol\";\r\n\r\ncontract dBank {\r\n\r\n  //assign Token contract to variable\r\n\r\n  //add mappings\r\n\r\n  //add events\r\n\r\n  //pass as constructor argument deployed Token contract\r\n  constructor() public {\r\n    //assign token deployed contract to variable\r\n  }\r\n\r\n  function deposit() payable public {\r\n    //check if msg.sender didn't already deposited funds\r\n    //check if msg.value is >= than 0.01 ETH\r\n\r\n    //increase msg.sender ether deposit balance\r\n    //start msg.sender hodling time\r\n\r\n    //set msg.sender deposit status to true\r\n    //emit Deposit event\r\n  }\r\n\r\n  function withdraw() public {\r\n    //check if msg.sender deposit status is true\r\n    //assign msg.sender ether deposit balance to variable for event\r\n\r\n    //check user's hodl time\r\n\r\n    //calc interest per second\r\n    //calc accrued interest\r\n\r\n    //send eth to user\r\n    //send interest in tokens to user\r\n\r\n    //reset depositer data\r\n\r\n    //emit event\r\n  }\r\n\r\n  function borrow() payable public {\r\n    //check if collateral is >= than 0.01 ETH\r\n    //check if user doesn't have active loan\r\n\r\n    //add msg.value to ether collateral\r\n\r\n    //calc tokens amount to mint, 50% of msg.value\r\n\r\n    //mint&send tokens to user\r\n\r\n    //activate borrower's loan status\r\n\r\n    //emit event\r\n  }\r\n\r\n  function payOff() public {\r\n    //check if loan is active\r\n    //transfer tokens from user back to the contract\r\n\r\n    //calc fee\r\n\r\n    //send user's collateral minus fee\r\n\r\n    //reset borrower's data\r\n\r\n    //emit event\r\n  }\r\n}",
-  "sourcePath": "C:\\Projects\\solidity-study\\ehereum-programming-tutorial\\dbank\\src\\contracts\\dBank.sol",
+  "sourcePath": "C:\\Projects\\solidity-study\\ethereum-programming-tutorial\\src\\contracts\\dBank.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/dBank.sol",
     "exportedSymbols": {
@@ -634,8 +634,9 @@
     "version": "0.7.6+commit.7338295f.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.4.3",
-  "updatedAt": "2022-03-24T01:06:38.301Z",
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-03-24T13:55:48.676Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
