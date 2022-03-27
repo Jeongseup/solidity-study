@@ -9,6 +9,8 @@ contract MultiTransfer {
   using SafeMath for uint256;
   using SafeERC20 for IERC20;
 
+  // 이벤트 추가하면 좋을 듯.
+  
   function multiTransferToken(
     address _token,
     address[] calldata _addresses,
