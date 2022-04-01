@@ -3,8 +3,7 @@
 require('dotenv').config()
 // const HDWalletProvider = require('truffle-hdwallet-provider-privkey')
 const HDWalletProvider = require('@truffle/hdwallet-provider')
-const PROVIDER_URL = 'https://ethereum-ropsten-rpc.allthatnode.com'
-const { PRIVATE_KEY, API_KEY, INFURA_KEY } = process.env
+const { PRIVATE_KEY, API_KEY, ENDPOINT_URL } = process.env
 
 // console.log(PRIVATE_KEY, PROVIDER_URL + '/' + API_KEY)
 
@@ -17,10 +16,7 @@ module.exports = {
         },
         ropsten: {
             provider: () => {
-                return new HDWalletProvider(
-                    PRIVATE_KEY,
-                    `wss://ropsten.infura.io/ws/v3/${INFURA_KEY}`
-                )
+                return new HDWalletProvider(PRIVATE_KEY, `${API_KEY}`)
             },
             network_id: 3 // Ropsten's id
             // gas: 5500000, // Ropsten has a lower block limit than mainnet

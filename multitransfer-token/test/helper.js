@@ -16,7 +16,7 @@ module.exports.getCSVData = (filePath) => {
                 }
             })
             .on('end', function () {
-                console.log(csvData)
+                // console.log(csvData)
                 resolve(csvData)
             })
     })
