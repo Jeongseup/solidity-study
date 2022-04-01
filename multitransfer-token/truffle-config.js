@@ -3,9 +3,7 @@
 require('dotenv').config()
 // const HDWalletProvider = require('truffle-hdwallet-provider-privkey')
 const HDWalletProvider = require('@truffle/hdwallet-provider')
-const { PRIVATE_KEY, API_KEY, ENDPOINT_URL } = process.env
-
-// console.log(PRIVATE_KEY, PROVIDER_URL + '/' + API_KEY)
+const { PRIVATE_KEY, ENDPOINT_URL } = process.env
 
 module.exports = {
     networks: {
@@ -16,7 +14,7 @@ module.exports = {
         },
         ropsten: {
             provider: () => {
-                return new HDWalletProvider(PRIVATE_KEY, `${API_KEY}`)
+                return new HDWalletProvider(PRIVATE_KEY, ENDPOINT_URL)
             },
             network_id: 3 // Ropsten's id
             // gas: 5500000, // Ropsten has a lower block limit than mainnet
